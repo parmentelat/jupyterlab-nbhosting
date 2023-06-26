@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.0.6
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: thierry.parmentelat@inria.fr
+author_name: Thierry Parmentelat
+has_binder: false
+has_settings: true
+kind: frontend
+labextension_name: jupyterlab-nbhosting
+project_short_description: Custom look and feel for nbhosting notebooks
+python_name: jupyterlab_nbhosting
+repository: https://github.com/parmentelat/jupyterlab-nbhosting
+test: true
+

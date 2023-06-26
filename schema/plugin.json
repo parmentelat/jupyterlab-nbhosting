@@ -4,5 +4,46 @@
   "description": "jupyterlab-nbhosting settings.",
   "type": "object",
   "properties": {},
-  "additionalProperties": false
+  "additionalProperties": false,
+  "jupyter.lab.menus": {
+    "main": [
+      {
+        "id": "jp-mainmenu-file",
+        "items": [
+          { "command": "launcher:create", "disabled": true },
+          { "command": "docmanager:clone", "disabled": true },
+          { "command": "filebrowser:open-path", "disabled": true},
+          { "command": "filebrowser:open-url", "disabled": true},
+          { "command": "filemenu:create-console", "disabled": true },
+          { "command": "application:close", "disabled": true },
+          { "command": "application:close-all", "disabled": true },
+          { "command": "docmanager:reload", "disabled": true },
+          { "command": "docmanager:save-as", "disabled": true },
+          { "command": "docmanager:save-all", "disabled": true },
+          { "command": "docmanager:restore-checkpoint", "disabled": true },
+          { "command": "workspace-ui:save-as", "disabled": true },
+          { "command": "workspace-ui:save", "disabled": true },
+          { "command": "filemenu:close-and-cleanup", "disabled": true },
+          { "command": "filemenu:logout", "disabled": true },
+          { "command": "filemenu:shutdown", "disabled": true },
+          { "type": "separator", "rank": 100},
+          { "command": "nbhosting:reset-to-original", "rank": 1000 },
+          { "command": "nbhosting:share-static-version", "rank": 1001 },
+          { "command": "nbhosting:show-student-id", "rank": 1002 }
+        ]
+      },
+      {
+        "id": "jp-mainmenu-view",
+        "items": [
+          {
+            "type": "submenu",
+            "disabled": true,
+            "submenu": {
+              "id": "jp-mainmenu-view-appearance"
+            }
+          }
+        ]
+      }
+    ]
+  }
 }

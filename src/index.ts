@@ -256,6 +256,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
       execute: show_student_id,
     })
     palette.addItem({command, category})
+
+    app.commands.execute('application:toggle-header')
   }
 }
 

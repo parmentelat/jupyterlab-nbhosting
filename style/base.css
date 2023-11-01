@@ -7,3 +7,44 @@
 .dialog-button {
   border-radius: 10px;
 }
+
+body {
+  --nbh-menubar-color: aliceblue;
+  --nbh-topbar-color: #e0e9f2;
+  --nbh-trusted-color: aliceblue;
+}
+
+/* remove the first line altogether
+ * this approach does not work well,
+ * we don't get the extra space back
+ * better use the application:toggle-header command
+#top-panel-wrapper {
+  display: none;
+}
+*/
+.jp-WindowedPanel-inner {
+  margin-top: 0px !important;
+}
+
+/* turn off the button to switch to jlab */
+.jp-nb-interface-switcher-button {
+  display: none !important;
+}
+.jp-InterfaceSwitcher {
+  display: none !important;
+}
+
+
+/* set color for the 2 following lines */
+#menu-panel-wrapper>* {
+  background-color: var(--nbh-topbar-color);
+}
+#jp-MainMenu {
+  background-color: var(--nbh-menubar-color);
+}
+button.jp-NotebookTrustedStatus {
+  background-color: var(--nbh-trusted-color);
+}
+.jp-Toolbar.jp-NotebookPanel-toolbar {
+  background-color: var(--nbh-topbar-color);
+}

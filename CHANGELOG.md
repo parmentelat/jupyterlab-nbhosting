@@ -1,5 +1,6 @@
 # Changelog
 
-<!-- <START NEW CHANGELOG ENTRY> -->
+## 0.2.0 2023 Nov 1
 
-<!-- <END NEW CHANGELOG ENTRY> -->
+* first rough version
+* the 3 additional buttons are there

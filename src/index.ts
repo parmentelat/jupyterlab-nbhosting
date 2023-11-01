@@ -111,7 +111,23 @@ const plugin: JupyterFrontEndPlugin<void> = {
     const match = regexp.exec(window.location.pathname)
     const notebook = (match) ? match[map.notebook] : undefined
 
+    const not_under_nbhosting = () => {
+      showDialog({
+        title: "Available under nbhosting only",
+        body: "You don't appear to be running inside nbhosting, sorry",
+        buttons: [
+          { label: "Ok", caption: "Ok", iconLabel: "Ok", accept: true, className: "dialog-button",
+            ariaLabel: "aria-label", iconClass: "icon-class", actions: [], displayType: 'default' },
+        ],
+        defaultButton: 0,
+      })
+    }
+
     const reset_to_original = (arg: any) => {
+      if (!notebook) {
+        not_under_nbhosting()
+        return
+      }
       showDialog({
         title: "Confirm reset to original",
         body: "Are you sure to reset your notebook to the original version ? "
@@ -138,10 +154,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
     }
 
     const share_static_version = async (arg: any) => {
-      // if (!notebook) {
-      //   console.log("not under nbhosting")
-      //   return
-      // }
+      if (!notebook) {
+        not_under_nbhosting()
+        return
+      }
       let share_url = `/ipythonShare/${course}/${notebook}/${student}`
       try {
         const response = await fetch(share_url)
@@ -151,11 +167,14 @@ const plugin: JupyterFrontEndPlugin<void> = {
           message = `Could not create snapshot` + `\n${jsonData.error}`
         } else {
           message =
-          `<p class='nbh-dialog'>To share a static version of your notebook, copy this link:`
-          + `<a id="try-share-url" target='_blank' href='${jsonData.url_path}'>Try the link</a></p>`
-          + `<span id="share-url">${jsonData.url}</span>`
-          + `</div>`
-          +`<p class='nbh-dialog'>Note that sharing the same notebook several times overwrites the same snapshot</p>`;
+            //   `<p class='nbh-dialog'>:`
+            // + `<a id="try-share-url" target='_blank' href='${jsonData.url_path}'>Try the link</a></p>`
+            // + `<span id="share-url">${jsonData.url}</span>`
+            // + `</div>`
+            // +`<p class='nbh-dialog'></p>`
+              `To share a static version of your notebook, copy the link`
+            + `\n\n`
+            + `Note that sharing the same notebook several times overwrites the same snapshot`
         }
         //
         showDialog({
@@ -182,6 +201,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
     }
 
     const show_student_id = (arg: any) => {
+      if (!notebook) {
+        not_under_nbhosting()
+        return
+      }
       showDialog({
         title: "Your student id",
         body: student,

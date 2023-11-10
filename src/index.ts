@@ -13,6 +13,8 @@ import { ICommandPalette, showDialog } from '@jupyterlab/apputils'
 
 import { ISettingRegistry } from '@jupyterlab/settingregistry'
 
+import { CommandRegistry } from '@lumino/commands'
+
 /**
  * Initialization data for the jupyterlab-nbhosting extension.
  */
@@ -257,7 +259,23 @@ const plugin: JupyterFrontEndPlugin<void> = {
     })
     palette.addItem({command, category})
 
-    app.commands.execute('application:toggle-header')
+    // to invoke application:toggle-header
+    // we may need to wait for the command to be registered
+    const command_to_run = 'application:toggle-header'
+    if (app.commands.hasCommand(command_to_run)) {
+      app.commands.execute(command_to_run)
+    } else {
+      console.log(`waiting for the ${command_to_run} command to register`, app)
+      const callback = (commands: CommandRegistry, changes: CommandRegistry.ICommandChangedArgs) => {
+        if (changes.type === 'added') console.log(changes)
+        if ( (changes.type === 'added')
+             && (changes.id === command_to_run) ) {
+            app.commands.execute(command_to_run)
+            commands.commandChanged.disconnect(callback)
+        }
+      }
+      app.commands.commandChanged.connect(callback);
+    }
   }
 }
 

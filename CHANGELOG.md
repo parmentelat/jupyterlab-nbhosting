@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1 2023 Nov 10
+
+* unsuccessful attempt at turning off the header
+
 ## 0.4.0 2023 Nov 10
 
 * fewer menu entries

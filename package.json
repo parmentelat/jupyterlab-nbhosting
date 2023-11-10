@@ -99,7 +99,20 @@
     "jupyterlab": {
         "extension": true,
         "outputDir": "jupyterlab_nbhosting/labextension",
-        "schemaDir": "schema"
+        "schemaDir": "schema",
+        "disabledExtensions": [
+            "@jupyter-notebook/lab-extension:interface-switcher",
+            "@jupyterlab/terminal-extension:plugin",
+            "@jupyter-notebook/terminal-extension:opener",
+            "@jupyter-notebook/terminal-extension:redirect",
+            "@jupyterlab/fileeditor-extension:plugin",
+            "@jupyterlab/fileeditor-extension:tab-space-status",
+            "@jupyterlab/fileeditor-extension:cursor-position",
+            "@jupyterlab/fileeditor-extension:completer",
+            "@jupyterlab/fileeditor-extension:search",
+            "@jupyterlab/fileeditor-extension:language-server",
+            "jupyterlab/fileeditor-extension:editor-syntax-status"
+        ]
     },
     "eslintIgnore": [
         "node_modules",

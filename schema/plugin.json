@@ -10,6 +10,13 @@
       {
         "id": "jp-mainmenu-file",
         "items": [
+          { "type": "submenu",
+            "disabled": true,
+            "submenu": {
+              "id": "jp-mainmenu-file-new"
+            }
+          },
+          { "command": "application:rename", "disabled": true},
           { "command": "launcher:create", "disabled": true },
           { "command": "docmanager:clone", "disabled": true },
           { "command": "filebrowser:open-path", "disabled": true},
@@ -41,7 +48,30 @@
             "submenu": {
               "id": "jp-mainmenu-view-appearance"
             }
+          },
+          { "command": "apputils:activate-command-palette", "disabled": true},
+          { "command": "application:open-lab", "disabled": true},
+          { "command": "filebrowser:toggle-main", "disabled": true},
+          { "command": "application:toggle-zen", "disabled": true},
+          { "command": "apputils:display-notifications", "disabled": true},
+          { "command": "application:open-tree", "disabled": true},
+          { "command": "notebook:toggle-render-side-by-side-current", "disabled": true},
+          { "command": "jupyter-notebook:open-notebook", "disabled": true, "args": { "isMenu": true}},
+          { "command": "jupyter-notebook:open-lab", "disabled": true, "args": { "isMenu": true}},
+          { "command": "jupyter-notebook:open-nbclassic", "disabled": true, "args": { "isMenu": true}},
+          {
+            "type": "submenu",
+            "disabled": true,
+            "submenu": {
+              "id": "jp-mainmenu-view-codemirror-language"
+            }
           }
+        ]
+      },
+      {
+        "id": "jp-mainmenu-help",
+        "items": [
+          { "command": "jupyter-notebook:launch-tree", "disabled": true}
         ]
       }
     ]

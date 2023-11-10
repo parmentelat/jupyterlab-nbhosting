@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.4.1 2023 Nov 10
+## 0.4.2 2023 Nov 10
 
-* unsuccessful attempt at turning off the header
+* turn off the header
 
 ## 0.4.0 2023 Nov 10
 

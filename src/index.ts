@@ -259,9 +259,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
     })
     palette.addItem({command, category})
 
-    // to invoke application:toggle-header
+    // to invoke a command
     // we may need to wait for the command to be registered
-    const command_to_run = 'application:toggle-header'
+    // under notebook this function is called toggle-top
+    const command_to_run = 'application:toggle-top'
     if (app.commands.hasCommand(command_to_run)) {
       app.commands.execute(command_to_run)
     } else {

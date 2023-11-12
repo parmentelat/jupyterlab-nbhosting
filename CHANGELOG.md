@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.0 2023 Nov 12
+
+* turn off the Settings menu altogether
+* autosave interval set to 5s
+* review all dialogs for the 3 extra function
+  * use html and css to make them look nicer
+  * drop cliptoclipboard which is not working due to ifram cross-origin policy
+
 ## 0.4.2 2023 Nov 10
 
 * turn off the header

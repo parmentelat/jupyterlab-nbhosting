@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1 2023 Nov 12
+
+* a few more remaiing menu entries are gone
+
 ## 0.5.0 2023 Nov 12
 
 * turn off the Settings menu altogether

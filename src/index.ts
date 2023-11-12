@@ -277,6 +277,23 @@ const plugin: JupyterFrontEndPlugin<void> = {
       }
       app.commands.commandChanged.connect(callback);
     }
+
+    // shorter autosave interval
+    if (settingRegistry) {
+      console.log('jupyterlab-nbhosting autosaveInterval set to 5 seconds')
+      settingRegistry
+        .load('@jupyterlab/docmanager-extension:plugin')
+        .then(
+          (nbSettings: ISettingRegistry.ISettings) =>
+              nbSettings.set('autosaveInterval', 5))
+        .catch(
+            (err: Error) => {
+              console.error(
+                `jupyterlab-nbhosting: Could not set autosaveInterval : ${err}`
+              )
+        })
+    }
+
   }
 }
 

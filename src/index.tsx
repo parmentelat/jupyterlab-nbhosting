@@ -29,7 +29,6 @@ const plugin: JupyterFrontEndPlugin<void> = {
     palette: ICommandPalette,
     settingRegistry: ISettingRegistry | null
   ) => {
-    console.log('JupyterLab extension jupyterlab-nbhosting is activated!')
 
     if (settingRegistry) {
       settingRegistry
@@ -294,6 +293,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
         })
     }
 
+    console.log('JupyterLab extension jupyterlab-nbhosting has activated!')
   }
 }
 

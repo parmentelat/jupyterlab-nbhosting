@@ -68,6 +68,9 @@
           }
         ]
       },
+      { "id": "jp-mainmenu-settings",
+        "disabled": true
+      },
       {
         "id": "jp-mainmenu-help",
         "items": [

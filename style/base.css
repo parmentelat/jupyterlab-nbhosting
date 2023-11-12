@@ -48,3 +48,24 @@ button.jp-NotebookTrustedStatus {
 .jp-Toolbar.jp-NotebookPanel-toolbar {
   background-color: var(--nbh-topbar-color);
 }
+
+.nbh-dialog {
+  --nbh-tocopy-color: rgb(109, 7, 7);
+
+  & .nbh-larger {
+    font-size: larger;
+  }
+
+  & #try-share-url {
+    margin-left: 40px;
+  }
+  & #share-url {
+    color: var(--nbh-tocopy-color);
+    font-size: x-small;
+  }
+  & #student-id {
+    font-size: x-large;
+    font-weight: bold;
+    color: var(--nbh-tocopy-color);
+  }
+}

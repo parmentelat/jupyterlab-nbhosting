@@ -59,6 +59,14 @@
           { "command": "jupyter-notebook:open-notebook", "disabled": true, "args": { "isMenu": true}},
           { "command": "jupyter-notebook:open-lab", "disabled": true, "args": { "isMenu": true}},
           { "command": "jupyter-notebook:open-nbclassic", "disabled": true, "args": { "isMenu": true}},
+          { "command": "notebook:hide-cell-code", "disabled": true},
+          { "command": "notebook:show-cell-code", "disabled": true},
+          { "command": "notebook:hide-all-cell-code", "disabled": true},
+          { "command": "notebook:show-all-cell-code", "disabled": true},
+          { "command": "notebook:hide-cell-outputs", "disabled": true},
+          { "command": "notebook:show-cell-outputs", "disabled": true},
+          { "command": "notebook:hide-all-cell-outputs", "disabled": true},
+          { "command": "notebook:show-all-cell-outputs", "disabled": true},
           {
             "type": "submenu",
             "disabled": true,
@@ -68,7 +76,14 @@
           }
         ]
       },
-      { "id": "jp-mainmenu-settings",
+      {
+        "id": "jp-mainmenu-run",
+        "items": [
+          { "command": "notebook:run-in-console", "disabled": true}
+        ]
+      },
+      {
+        "id": "jp-mainmenu-settings",
         "disabled": true
       },
       {

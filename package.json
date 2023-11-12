@@ -111,7 +111,8 @@
             "@jupyterlab/fileeditor-extension:completer",
             "@jupyterlab/fileeditor-extension:search",
             "@jupyterlab/fileeditor-extension:language-server",
-            "jupyterlab/fileeditor-extension:editor-syntax-status"
+            "jupyterlab/fileeditor-extension:editor-syntax-status",
+            "@jupyter-notebook/application-extension:sidepanel"
         ]
     },
     "eslintIgnore": [

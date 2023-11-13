@@ -49,6 +49,53 @@ button.jp-NotebookTrustedStatus {
   background-color: var(--nbh-topbar-color);
 }
 
+.jp-Notebook-ExecutionIndicator {
+  width: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.jp-Notebook-ExecutionIndicator[data-status="idle"] {
+  background-color: var(--jp-accent-color0);
+
+  & circle {
+    fill: var(--jp-accent-color3);
+  }
+}
+.jp-Notebook-ExecutionIndicator[data-status="disconnected"],
+.jp-Notebook-ExecutionIndicator[data-status="connecting"] {
+  background-color: var(--jp-error-color1);
+
+  & circle {
+    fill: var(--jp-error-color3);
+  }
+
+  /* add a more explicit label when kernel is down */
+  width: 250px;
+  & svg {
+    margin: 0px;
+  }
+  & :first-child {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    & >svg {
+      stroke: black;
+    }
+  }
+  /* without the > here, things are a little off
+     what I mean id to add an after on the first child
+     of the element with the data-status attribute above
+     BUT
+     without > it will add an after on ANY first child
+     inside the hierarchy
+  */
+  & >:first-child::after {
+      content: "Kernel is down, reload your page !!";
+      color: var(--jp-error-color3);
+  }
+}
 .nbh-dialog {
   --nbh-tocopy-color: rgb(109, 7, 7);
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.2 2023 Nov 13
+
+* further scrubbing of the menus
+  * file: remove trust notebook
+  * kernel: remove half of the menu entries
+
 ## 0.5.1 2023 Nov 12
 
 * a few more remaiing menu entries are gone

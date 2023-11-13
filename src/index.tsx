@@ -1,4 +1,4 @@
-// still missing from he notebook classic version
+// still missing from the notebook classic version
 // * enable_move_up_down
 //   -> dropping this, no need as we can use the mouse to drag cells
 // * show_metadata_in_header -> should go in courselevels

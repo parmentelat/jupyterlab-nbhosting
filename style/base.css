@@ -26,15 +26,6 @@ body {
   margin-top: 0px !important;
 }
 
-/* turn off the button to switch to jlab */
-.jp-nb-interface-switcher-button {
-  display: none !important;
-}
-.jp-InterfaceSwitcher {
-  display: none !important;
-}
-
-
 /* set color for the 2 following lines */
 #menu-panel-wrapper>* {
   background-color: var(--nbh-topbar-color);

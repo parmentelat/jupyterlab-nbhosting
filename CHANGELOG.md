@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.3 2023 Nov 13
+
+* better hightlight cases when the kernel was lost
+  * and explicitly instruct to reload the page
+
 ## 0.5.2 2023 Nov 13
 
 * further scrubbing of the menus
@@ -8,7 +13,7 @@
 
 ## 0.5.1 2023 Nov 12
 
-* a few more remaiing menu entries are gone
+* a few more remaining menu entries are gone
 
 ## 0.5.0 2023 Nov 12
 

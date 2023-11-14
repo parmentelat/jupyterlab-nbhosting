@@ -1,12 +1,7 @@
 /*
     See the JupyterLab Developer Guide for useful CSS Patterns:
-
     https://jupyterlab.readthedocs.io/en/stable/developer/css.html
 */
-
-.dialog-button {
-  border-radius: 10px;
-}
 
 body {
   --nbh-menubar-color: aliceblue;
@@ -14,19 +9,15 @@ body {
   --nbh-trusted-color: aliceblue;
 }
 
-/* remove the first line altogether
- * this approach does not work well,
- * we don't get the extra space back
- * better use the application:toggle-header command
-#top-panel-wrapper {
-  display: none;
-}
+
+/*
+  ---------- header ----------
 */
 .jp-WindowedPanel-inner {
   margin-top: 0px !important;
 }
 
-/* set color for the 2 following lines */
+/* set color for the 2 remaining lines */
 #menu-panel-wrapper>* {
   background-color: var(--nbh-topbar-color);
 }
@@ -40,7 +31,9 @@ button.jp-NotebookTrustedStatus {
   background-color: var(--nbh-topbar-color);
 }
 
-/* there may be a smarter way to do this,
+/*
+  kernel switcher
+  there may be a smarter way to do this,
   see the jupterlab gitter and schema/plugin.json.kernelname
 */
 .jp-Toolbar-item.jp-KernelName {
@@ -48,6 +41,11 @@ button.jp-NotebookTrustedStatus {
 }
 
 
+/*
+  ---------- execution indicator ----------
+  the  is the bottom right widget in the header
+  we use this to make it conspicuous when the kernel is down
+*/
 .jp-Notebook-ExecutionIndicator {
   width: 32px;
   display: flex;
@@ -95,6 +93,15 @@ button.jp-NotebookTrustedStatus {
       color: var(--jp-error-color3);
   }
 }
+
+
+/*
+ the look of the dialogs for our 3 extra functions
+*/
+ .nbh-dialog-button {
+  border-radius: 10px;
+}
+
 .nbh-dialog {
   --nbh-tocopy-color: rgb(109, 7, 7);
 

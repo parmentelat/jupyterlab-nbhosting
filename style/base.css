@@ -93,6 +93,30 @@ button.jp-NotebookTrustedStatus {
       color: var(--jp-error-color3);
   }
 }
+.jp-Notebook-ExecutionIndicator[data-status="busy"] {
+  background-color: var(--jp-warn-color1);
+
+  & path {
+    fill: var(--jp-warn-color3);
+  }
+  width: 250px;
+  & svg {
+    margin: 0px;
+  }
+  & :first-child {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    & >svg {
+      stroke: black;
+    }
+  }
+  & >:first-child::after {
+      content: "Kernel is busy, please wait !!";
+      color: var(--jp-warn-color3);
+  }
+}
 
 
 /*

@@ -1,6 +1,6 @@
 {
     "name": "jupyterlab-nbhosting",
-    "version": "0.5.3",
+    "version": "0.5.4",
     "description": "Custom look and feel for nbhosting notebooks",
     "keywords": [
         "jupyter",

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.4 2023 Nov 14
+
+* close #6: remove kernel switcher button and debugger icon
+* also highlight when kernel is busy
+
 ## 0.5.3 2023 Nov 13
 
 * better hightlight cases when the kernel was lost

@@ -9,8 +9,8 @@ body {
   --nbh-trusted-color: aliceblue;
 }
 
-
 /*
+
   ---------- header ----------
 */
 .jp-WindowedPanel-inner {
@@ -18,7 +18,7 @@ body {
 }
 
 /* set color for the 2 remaining lines */
-#menu-panel-wrapper>* {
+#menu-panel-wrapper > * {
   background-color: var(--nbh-topbar-color);
 }
 #jp-MainMenu {
@@ -40,8 +40,8 @@ button.jp-NotebookTrustedStatus {
   display: none;
 }
 
-
 /*
+
   ---------- execution indicator ----------
   the  is the bottom right widget in the header
   we use this to make it conspicuous when the kernel is down
@@ -52,15 +52,15 @@ button.jp-NotebookTrustedStatus {
   flex-direction: column;
   align-items: stretch;
 }
-.jp-Notebook-ExecutionIndicator[data-status="idle"] {
+.jp-Notebook-ExecutionIndicator[data-status='idle'] {
   background-color: var(--jp-accent-color0);
 
   & circle {
     fill: var(--jp-accent-color3);
   }
 }
-.jp-Notebook-ExecutionIndicator[data-status="disconnected"],
-.jp-Notebook-ExecutionIndicator[data-status="connecting"] {
+.jp-Notebook-ExecutionIndicator[data-status='disconnected'],
+.jp-Notebook-ExecutionIndicator[data-status='connecting'] {
   background-color: var(--jp-error-color1);
 
   & circle {
@@ -77,7 +77,7 @@ button.jp-NotebookTrustedStatus {
     flex-wrap: nowrap;
     justify-content: space-around;
 
-    & >svg {
+    & > svg {
       stroke: black;
     }
   }
@@ -88,12 +88,12 @@ button.jp-NotebookTrustedStatus {
      without > it will add an after on ANY first child
      inside the hierarchy
   */
-  & >:first-child::after {
-      content: "Kernel is down, reload your page !!";
-      color: var(--jp-error-color3);
+  & > :first-child::after {
+    content: 'Kernel is down, reload your page !!';
+    color: var(--jp-error-color3);
   }
 }
-.jp-Notebook-ExecutionIndicator[data-status="busy"] {
+.jp-Notebook-ExecutionIndicator[data-status='busy'] {
   background-color: var(--jp-warn-color1);
 
   & path {
@@ -108,21 +108,21 @@ button.jp-NotebookTrustedStatus {
     flex-wrap: nowrap;
     justify-content: space-around;
 
-    & >svg {
+    & > svg {
       stroke: black;
     }
   }
-  & >:first-child::after {
-      content: "Kernel is busy, please wait !!";
-      color: var(--jp-warn-color3);
+  & > :first-child::after {
+    content: 'Kernel is busy, please wait !!';
+    color: var(--jp-warn-color3);
   }
 }
 
-
 /*
+
  the look of the dialogs for our 3 extra functions
 */
- .nbh-dialog-button {
+.nbh-dialog-button {
   border-radius: 10px;
 }
 

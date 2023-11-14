@@ -10,17 +10,18 @@
       {
         "id": "jp-mainmenu-file",
         "items": [
-          { "type": "submenu",
+          {
+            "type": "submenu",
             "disabled": true,
             "submenu": {
               "id": "jp-mainmenu-file-new"
             }
           },
-          { "command": "application:rename", "disabled": true},
+          { "command": "application:rename", "disabled": true },
           { "command": "launcher:create", "disabled": true },
           { "command": "docmanager:clone", "disabled": true },
-          { "command": "filebrowser:open-path", "disabled": true},
-          { "command": "filebrowser:open-url", "disabled": true},
+          { "command": "filebrowser:open-path", "disabled": true },
+          { "command": "filebrowser:open-url", "disabled": true },
           { "command": "filemenu:create-console", "disabled": true },
           { "command": "application:close", "disabled": true },
           { "command": "application:close-all", "disabled": true },
@@ -33,8 +34,8 @@
           { "command": "filemenu:close-and-cleanup", "disabled": true },
           { "command": "filemenu:logout", "disabled": true },
           { "command": "filemenu:shutdown", "disabled": true },
-          { "command": "notebook:trust", "disabled": true},
-          { "type": "separator", "rank": 100},
+          { "command": "notebook:trust", "disabled": true },
+          { "type": "separator", "rank": 100 },
           { "command": "nbhosting:reset-to-original", "rank": 1000 },
           { "command": "nbhosting:share-static-version", "rank": 1001 },
           { "command": "nbhosting:show-student-id", "rank": 1002 }
@@ -50,24 +51,39 @@
               "id": "jp-mainmenu-view-appearance"
             }
           },
-          { "command": "apputils:activate-command-palette", "disabled": true},
-          { "command": "application:open-lab", "disabled": true},
-          { "command": "filebrowser:toggle-main", "disabled": true},
-          { "command": "application:toggle-zen", "disabled": true},
-          { "command": "apputils:display-notifications", "disabled": true},
-          { "command": "application:open-tree", "disabled": true},
-          { "command": "notebook:toggle-render-side-by-side-current", "disabled": true},
-          { "command": "jupyter-notebook:open-notebook", "disabled": true, "args": { "isMenu": true}},
-          { "command": "jupyter-notebook:open-lab", "disabled": true, "args": { "isMenu": true}},
-          { "command": "jupyter-notebook:open-nbclassic", "disabled": true, "args": { "isMenu": true}},
-          { "command": "notebook:hide-cell-code", "disabled": true},
-          { "command": "notebook:show-cell-code", "disabled": true},
-          { "command": "notebook:hide-all-cell-code", "disabled": true},
-          { "command": "notebook:show-all-cell-code", "disabled": true},
-          { "command": "notebook:hide-cell-outputs", "disabled": true},
-          { "command": "notebook:show-cell-outputs", "disabled": true},
-          { "command": "notebook:hide-all-cell-outputs", "disabled": true},
-          { "command": "notebook:show-all-cell-outputs", "disabled": true},
+          { "command": "apputils:activate-command-palette", "disabled": true },
+          { "command": "application:open-lab", "disabled": true },
+          { "command": "filebrowser:toggle-main", "disabled": true },
+          { "command": "application:toggle-zen", "disabled": true },
+          { "command": "apputils:display-notifications", "disabled": true },
+          { "command": "application:open-tree", "disabled": true },
+          {
+            "command": "notebook:toggle-render-side-by-side-current",
+            "disabled": true
+          },
+          {
+            "command": "jupyter-notebook:open-notebook",
+            "disabled": true,
+            "args": { "isMenu": true }
+          },
+          {
+            "command": "jupyter-notebook:open-lab",
+            "disabled": true,
+            "args": { "isMenu": true }
+          },
+          {
+            "command": "jupyter-notebook:open-nbclassic",
+            "disabled": true,
+            "args": { "isMenu": true }
+          },
+          { "command": "notebook:hide-cell-code", "disabled": true },
+          { "command": "notebook:show-cell-code", "disabled": true },
+          { "command": "notebook:hide-all-cell-code", "disabled": true },
+          { "command": "notebook:show-all-cell-code", "disabled": true },
+          { "command": "notebook:hide-cell-outputs", "disabled": true },
+          { "command": "notebook:show-cell-outputs", "disabled": true },
+          { "command": "notebook:hide-all-cell-outputs", "disabled": true },
+          { "command": "notebook:show-all-cell-outputs", "disabled": true },
           {
             "type": "submenu",
             "disabled": true,
@@ -79,18 +95,16 @@
       },
       {
         "id": "jp-mainmenu-run",
-        "items": [
-          { "command": "notebook:run-in-console", "disabled": true}
-        ]
+        "items": [{ "command": "notebook:run-in-console", "disabled": true }]
       },
       {
         "id": "jp-mainmenu-kernel",
         "items": [
-          { "command": "debugger:restart-debug", "disabled": true},
-          { "command": "kernelmenu:reconnect-to-kernel", "disabled": true},
-          { "command": "kernelmenu:change", "disabled": true},
-          { "command": "kernelmenu:shutdown", "disabled": true},
-          { "command": "kernelmenu:shutdownAll", "disabled": true}
+          { "command": "debugger:restart-debug", "disabled": true },
+          { "command": "kernelmenu:reconnect-to-kernel", "disabled": true },
+          { "command": "kernelmenu:change", "disabled": true },
+          { "command": "kernelmenu:shutdown", "disabled": true },
+          { "command": "kernelmenu:shutdownAll", "disabled": true }
         ]
       },
       {
@@ -100,7 +114,7 @@
       {
         "id": "jp-mainmenu-help",
         "items": [
-          { "command": "jupyter-notebook:launch-tree", "disabled": true}
+          { "command": "jupyter-notebook:launch-tree", "disabled": true }
         ]
       }
     ]

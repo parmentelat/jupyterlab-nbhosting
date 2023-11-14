@@ -40,6 +40,14 @@ button.jp-NotebookTrustedStatus {
   background-color: var(--nbh-topbar-color);
 }
 
+/* there may be a smarter way to do this,
+  see the jupterlab gitter and schema/plugin.json.kernelname
+*/
+.jp-Toolbar-item.jp-KernelName {
+  display: none;
+}
+
+
 .jp-Notebook-ExecutionIndicator {
   width: 32px;
   display: flex;
